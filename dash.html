@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.angularjs.org/1.6.10/angular.min.js">
+    </script>
+    <script type="text/javascript" src="https://rawgit.com/nickdesaulniers/javascript-playlist-parser/master/lib/parser.min.js"></script>
+
+    <script src="./script.js">
+    </script>
+    <style>
+        body{background-color: black;}
+        video{background-color:white;}
+        h1{color:white;}
+        div{color:yellow;}
+    </style>
+</head>
+<body ng-app="myModule">
+
+        <section id=“openchannel_redirect”>
+                
+                <img src="switchboard-logo-white-nopad.png"> 
+             
+             <!-- <div ng-if=“!vm.showOpenChannelOwnerError”>
+                    <div class=“redirect_message”>
+                        <span ng-if=“!vm.er rorText”>You’re about to enter the conversation<br></span>
+                        {{ vm.errorText }}
+                    </div>
+                    <div class=“redirect_manual_message”>
+                        <a href=“/thank-you”>Click here if you are not redirected in a few seconds</a>
+                    </div>
+                </div> 
+             
+                <div ng-if=“vm.showOpenChannelOwnerError”>
+                    <div class=“redirect_message”>
+                        It seems you’re trying to access your own channel.
+                        <a href=“/app”>Click to continue</a>
+                    </div>
+                </div> -->
+             
+            </section>
+            <div  ng-controller="myController">                   
+                
+                <h1>Hello</h1>
+            
+              
+
+
+
+
+                <audio controls="controls">
+                        <source ng-src="{{playlist}}" type="audio/mpeg">
+                 </audio>
+             <br>
+             <br>
+             <br>
+                {{error}}
+                {{url}}
+                <br>
+                {{audio}}
+                <br>
+            </div>
+
+
+</div>
+</body>
+
+
+</html>
