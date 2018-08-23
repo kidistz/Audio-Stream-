@@ -9,7 +9,8 @@
     </script>
     <style>
         body{background-color: black;}
-        video{background-color:white;}
+        video{background-color:yellow;
+             color:aqua;}
         h1{color:white;}
         div{color:yellow;}
     </style>
@@ -39,25 +40,20 @@
              
             </section>
             <div  ng-controller="myController">                   
-                
-                <h1>Hello</h1>
+                    <ul>
+                        <li ng-repeat="station in stations">
+                        {{station.name}}
+                            <ul>
+                                <li ng-repeat="audio in station.playlist">
+                                        <audio controls>
+                                            <source src={{audio.file}} type="audio/mpeg">
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
             
-              
-
-
-
-
-                <audio controls="controls">
-                        <source ng-src="{{playlist}}" type="audio/mpeg">
-                 </audio>
-             <br>
-             <br>
-             <br>
-                {{error}}
-                {{url}}
-                <br>
-                {{audio}}
-                <br>
             </div>
 
 
